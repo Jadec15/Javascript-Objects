@@ -17,7 +17,9 @@ const myWallet = new Wallet(
   8,
   { targetGiftCard, sephoraGiftCard, debitCard },
   15,
-  false
+  false,
+  "May 20, 2021 15:00:00 EST"
 );
 
 console.log("myWallet: ", myWallet);
+console.log("Age of wallet: ", myWallet.walletAge(), "days");
