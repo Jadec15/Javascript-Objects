@@ -23,3 +23,20 @@ const myWallet = new Wallet(
 
 console.log("myWallet: ", myWallet);
 console.log("Age of wallet: ", myWallet.walletAge(), "days");
+
+const content = `
+<main>
+  <article>
+    <h1>${myWallet.name}</h1>
+    <ul>
+     <li>Color: ${myWallet.color}</li>
+     <li>Length: ${myWallet.length}</li>
+     <li>Number of Pockets: ${myWallet.pocketNumber}</li>
+     <li>Zipper Open?: ${myWallet.zipperOpen}</li>
+     <li>Date Aquired: ${myWallet.dateAquired}</li>
+    </ul>
+  </article
+</main>
+`;
+
+document.body.innerHTML = content;
