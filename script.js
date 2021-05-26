@@ -22,25 +22,39 @@ const myWallet = new Wallet(
   "./assets/everyday.svg"
 );
 
-console.log("myWallet: ", myWallet);
-console.log("Age of wallet: ", myWallet.walletAge(), "days");
-
 const content = `
-<main>
-  <article class="wallet" id="everyday">
     <figure class="wallet__image">
       <img src=${myWallet.image} alt="" />
     </figure>
     <h1  class="wallet__name">${myWallet.name}</h1>
     <ul class="wallet__features">
-     <li class="wallet__color">Color : ${myWallet.color}</li>
-     <li class="wallet__length">Length: ${myWallet.length}</li>
-     <li class="wallet__pockets">Number of Pockets: ${myWallet.pocketNumber}</li>
-     <li class="wallet__zippers">Zipper Open?: ${myWallet.zipperOpen}</li>
-     <li class="wallet__aquired">Date Aquired: ${myWallet.dateAquired}</li>
+     <li class="wallet__color">Color : <span>${myWallet.color}</span></li>
+     <li class="wallet__length">Length: <span>${myWallet.length}</span></li>
+     <li class="wallet__pockets">Number of Pockets: <span>${myWallet.pocketNumber}</span></li>
+     <li class="wallet__zippers">Zipper Open?: <span>${myWallet.zipperOpen}</span></li>
+     <li class="wallet__aquired">Date Aquired: <span>${myWallet.dateAquired}</span></li>
     </ul>
-  </article
-</main>
 `;
 
-document.body.innerHTML = content;
+const main = document.querySelector(".maincontent");
+const newArticle = document.createElement("article");
+newArticle.classList.add("wallet");
+newArticle.setAttribute("id", "everyday");
+newArticle.innerHTML = content;
+main.append(newArticle);
+
+const navigator = `
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Wallets</a></li>
+      <li><a href="#">Other</a></li>
+      <li><a href="#">Contact</a></li>
+`;
+
+const mainNav = document.createElement("nav");
+mainNav.classList.add("main-navigation");
+const navList = document.createElement("ul");
+navList.innerHTML = navigator;
+mainNav.append(navList);
+
+document.querySelector(".siteheader").append(mainNav);
