@@ -32,10 +32,10 @@ figure {
   font-weight: 200;
 }
 
-.siteheader:after {
+.siteheader::after {
+  content: "⚍⚌⚍";
   display: block;
   margin: 4rem 0;
-  content: "⚍⚌⚍";
 }
 
 .maincontent {
@@ -53,7 +53,7 @@ figure {
   text-align: center;
 }
 
-.page-header:after {
+.page-header::after {
   margin: 4rem auto;
   display: block;
   content: "";
@@ -70,7 +70,7 @@ figure {
   gap: 0 3rem;
 }
 
-.wallet:after {
+.wallet::after {
   margin: 0 auto;
   padding-top: 4rem;
   display: block;
@@ -78,6 +78,10 @@ figure {
   content: "";
   border-bottom: 3px solid black;
   width: 4rem;
+}
+
+.wallet__image {
+  grid-row: span 2;
 }
 
 .wallet__name {
@@ -94,10 +98,6 @@ figure {
   margin: 0;
   padding: 2rem 0 0 0;
   list-style-type: none;
-}
-
-.wallet__image {
-  grid-row: span 2;
 }
 
 .wallet__features li {
@@ -145,4 +145,18 @@ figure {
   justify-content: center;
   background: black;
   color: white;
+}
+
+.main-navigation ul {
+  margin: 0;
+  padding: 3rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.main-navigation ul a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: inherit;
 }
