@@ -6,7 +6,8 @@ class Wallet {
     contents,
     pocketNumber,
     zipperOpen,
-    dateAquired
+    dateAquired,
+    image
   ) {
     this.name = name;
     this.color = color;
@@ -15,6 +16,7 @@ class Wallet {
     this.pocketNumber = pocketNumber;
     this.zipperOpen = zipperOpen;
     this.dateAquired = dateAquired;
+    this.image = image;
   }
   unzipWallet(zipperStatus) {
     this.zipperOpen = zipperStatus;
