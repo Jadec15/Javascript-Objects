@@ -119,7 +119,7 @@ figure {
   }
 }
 
-.lid-toggle {
+.zipper-toggle {
   display: inline-block;
   border: 3px solid black;
   border-radius: 0.3rem;
@@ -128,12 +128,12 @@ figure {
   cursor: pointer;
   background-color: white;
 }
-.lid-toggle:hover,
-.lid-toggle:focus {
+.zipper-toggle:hover,
+.zipper-toggle:focus {
   background-color: hsl(0, 0%, 95%);
 }
 
-.lid-toggle:active {
+.zipper-toggle:active {
   background-color: black;
   color: white;
 }
